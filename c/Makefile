@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-Wall -Wextra -O2
-LDLIBS=-leditline
+LDLIBS=-lreadline
 
 SRCS=$(wildcard */*.c)
 BINS=$(SRCS:.c=)
