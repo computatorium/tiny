@@ -21,8 +21,6 @@ int main(void) {
   if (interactive)
     fprintf(stderr, "kv: set k v, get k, del k, count, list, dump f, load f, quit\n");
 
-  readline_completion_function 
-
   char *line;
   while ((line = readline(interactive ? "> " : NULL)) != NULL) {
     command_t c;
