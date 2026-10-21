@@ -1,0 +1,13 @@
+(rule
+ (target registry.ml)
+ (deps
+  ../catalog/problems.tsv
+  (:sources (glob_files_rec ../solutions/*.ml)))
+ (action
+  (with-stdout-to %{target}
+   (run %{exe:../tools/generate.exe}
+    %{dep:../catalog/problems.tsv} ../solutions %{sources}))))
+
+(library
+ (name problem_registry)
+ (libraries pc solutions))

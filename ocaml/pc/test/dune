@@ -1,0 +1,20 @@
+(test
+ (name test_pc)
+ (modules test_pc)
+ (libraries pc discovery problem_registry)
+ (deps ../catalog/problems.tsv)
+ (action (run %{test} %{dep:../catalog/problems.tsv})))
+
+(test
+ (name integration)
+ (modules integration)
+ (libraries unix)
+ (deps
+  ../dune-project ../dune
+  (source_tree ../catalog)
+  (source_tree ../lib)
+  (source_tree ../tools)
+  (source_tree ../registry)
+  ../solutions/dune
+  (source_tree ../bin))
+ (action (run %{test} %{workspace_root})))

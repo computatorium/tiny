@@ -1,0 +1,11 @@
+(lang dune 3.22)
+
+(name pc)
+
+(generate_opam_files true)
+
+(package
+ (name pc)
+ (synopsis "Programming Challenges catalog and fixture judge")
+ (description "Automatic discovery and exact-output judging for OCaml solutions to Skiena and Revilla's Programming Challenges.")
+ (depends (ocaml (>= 5.0))))

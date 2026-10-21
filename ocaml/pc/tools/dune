@@ -1,0 +1,8 @@
+(library
+ (name discovery)
+ (modules catalog))
+
+(executable
+ (name generate)
+ (modules generate)
+ (libraries discovery))

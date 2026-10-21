@@ -1,0 +1,4 @@
+(rule
+ (alias runtest)
+ (deps (source_tree tests))
+ (action (run %{exe:bin/main.exe} test --tests-dir tests)))
